@@ -726,7 +726,7 @@ def quote(
         ValueError: 종목 코드가 올바르지 않은 경우
     """
     if market == "KRX":
-        return domestic_quote(self, symbol=symbol, market = market)
+        return domestic_quote(self, symbol=symbol)
     else:
         return foreign_quote(
             self,
