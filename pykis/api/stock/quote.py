@@ -617,7 +617,7 @@ class KisForeignQuote(KisQuoteBase, KisAPIResponse):
 def domestic_quote(
     self: "PyKis",
     symbol: str,
-    market: str = "J", 
+    tv: str = "J", 
 ) -> KisDomesticQuote:
     """
     한국투자증권 국내 주식 현재가 조회
@@ -644,7 +644,7 @@ def domestic_quote(
         "/uapi/domestic-stock/v1/quotations/inquire-price",
         api="FHKST01010100",
         params={
-            "FID_COND_MRKT_DIV_CODE": market,
+            "FID_COND_MRKT_DIV_CODE": tv,
             "FID_INPUT_ISCD": symbol,
         },
         response_type=result,
@@ -707,6 +707,7 @@ def quote(
     symbol: str,
     market: MARKET_TYPE,
     extended: bool = False,
+    tv = "J",
 ) -> KisQuoteResponse:
     """
     한국투자증권 주식 현재가 조회
