@@ -707,7 +707,7 @@ def quote(
     symbol: str,
     market: MARKET_TYPE,
     extended: bool = False,
-    tv = "J",
+    tv : str = "J",
 ) -> KisQuoteResponse:
     """
     한국투자증권 주식 현재가 조회
@@ -739,7 +739,7 @@ def quote(
 def product_quote(
     self: "KisProductProtocol",
     extended: bool = False,
-    tv: "J",
+    tv: str = "J",
 ) -> KisQuoteResponse:
     """
     한국투자증권 주식 현재가 조회
@@ -759,5 +759,6 @@ def product_quote(
         self.kis,
         symbol=self.symbol,
         market=self.market,
+        tv=tv
         extended=extended,
     )
