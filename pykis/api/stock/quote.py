@@ -725,7 +725,7 @@ def quote(
         ValueError: 종목 코드가 올바르지 않은 경우
     """
     if market == "KRX":
-        return domestic_quote(self, symbol=symbol)
+        return domestic_quote(self, symbol=symbol, market = market)
     else:
         return foreign_quote(
             self,
@@ -738,6 +738,7 @@ def quote(
 def product_quote(
     self: "KisProductProtocol",
     extended: bool = False,
+    market: "J",
 ) -> KisQuoteResponse:
     """
     한국투자증권 주식 현재가 조회
