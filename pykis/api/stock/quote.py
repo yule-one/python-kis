@@ -759,6 +759,6 @@ def product_quote(
         self.kis,
         symbol=self.symbol,
         market=self.market,
-        tv=tv
+        tv=tv,
         extended=extended,
     )
