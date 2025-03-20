@@ -94,7 +94,7 @@ class KisQuotableProduct(Protocol):
     def quote(
         self,
         extended: bool = False,
-        market: str = "J",
+        tv: str = "J",
     ) -> KisQuoteResponse:
         """
         한국투자증권 주식 현재가 조회
